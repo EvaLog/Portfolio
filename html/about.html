@@ -1,7 +1,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script>
+$(document).ready(function(){
+  var swiper = new Swiper('.swiper-container', {
+      autoHeight: true, //enable auto height
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+   
 
-	
+});
 </script>
 <style>
 .col-md-12 {
@@ -29,11 +43,28 @@
 		height:100%;
 		margin:20px 20px 20px 10px;
 	}
-	
-        a {color:#1155CC;}
-        ul li {padding: 10px 0;}
-      code {display:block;white-space:pre; background-color:#f6f6f6;padding:8px; overflow:auto;border:1px dotted #999;margin:6px 0;}
-	
+    .swiper-container {
+      width: 100%;
+      height: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+    }
+    /* .swiper-container .swiper-slide {
+      height: 300px;
+      line-height: 300px;
+    }
+    .swiper-container .swiper-slide:nth-child(2n) {
+      height: 500px;
+      line-height: 500px;
+    } */
+    #aboutimg{
+        width: 50%;
+        height: 70%;
+    }
 </style>
 
 	<div class="container">
@@ -50,48 +81,20 @@
 	<figure><img src="img/profile.jpg" id="profileimg"></figure>
 	</div>
 	</div>
-	<!-- 닌자 슬라이더 -->
-	 <div id='ninja-slider'>
-        <div>
-            <div class="slider-inner">
-                <ul>
-                    <li><a class="ns-img" href="img/profile/1.jpg"></a></li>
-                    <li><a class="ns-img" href="img/profile/2.jpg"></a></li>
-                    <li><a class="ns-img" href="img/profile/3.jpg"></a></li>
-                    <li><a class="ns-img" href="img/profile/4.jpg"></a></li>
-                    <li><a class="ns-img" href="img/profile/5.jpg"></a></li>
-                 </ul>
-                <div class="fs-icon" title="Expand/Close"></div>
+	<div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/profile/2.jpg" id="aboutimg"></div>
+              <div class="swiper-slide"><img src="img/profile/3.jpg" id="aboutimg"></div>
+              <div class="swiper-slide"><img src="img/profile/4.jpg" id="aboutimg"></div>
+              <div class="swiper-slide"><img src="img/profile/5.jpg" id="aboutimg"></div>
+              <div class="swiper-slide"><img src="img/profile/6.jpg" id="aboutimg"></div>
+              
             </div>
-	
-	 <div id="thumbnail-slider">
-                <div class="inner">
-                    <ul>
-                        <li>
-                            <a class="thumb" href="img/profile/1.jpg"></a>
-                            <span>0</span>
-                        </li>
-                        <li>
-                            <a class="thumb" href="img/profile/2.jpg"></a>
-                            <span>1</span>
-                        </li>
-                        <li>
-                            <a class="thumb" href="img/profile/3.jpg"></a>
-                            <span>2</span>
-                        </li>
-                        <li>
-                            <a class="thumb" href="img/profile/4.jpg"></a>
-                            <span>3</span>
-                        </li>
-                        <li>
-                            <a class="thumb" href="img/profile/5.jpg"></a>
-                            <span>4</span>
-                        </li>
-                       
-                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
 	
 	</div>

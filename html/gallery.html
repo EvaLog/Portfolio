@@ -20,6 +20,7 @@
 		height:80%;
 		margin-top:20px;
 		margin-bottom:20px;
+		box-shadow: 2px 5px 2px rgb(156, 156, 156);
 	}
 	/* 실험 */
 	
@@ -56,15 +57,15 @@ $(document).ready(function(){
 	var Photograph = 21;
 	for(i=1;i<=wedding;i++){
 		$(".slider-inner ul").append("<li><a class='ns-img' href='img/weding/"+ i +".JPG'></a></li>");
-		$("#wedding .gallery").append("<div class= col-md-2><img src='img/weding/"+ i +".JPG'onclick='lightbox("+(i-1)+")'></div>");
+		$("#wedding .gallery").append("<div class= col-md-2><img src='img/weding sumnail/"+ i +".JPG'onclick='lightbox("+(i-1)+")'></div>");
 		}	
 	for(i=1;i<=movie;i++){
 		$(".slider-inner ul").append("<li><a class='ns-img' href='img/movie/"+ i +".jpg'></a></li>");
-		$("#movie .gallery").append("<div class= col-md-2><img src='img/movie/"+ i +".jpg'onclick='lightbox("+(24-1)+")'></div>");
+		$("#movie .gallery").append("<div class= col-md-2><img src='img/movie sumnail/"+ i +".jpg'onclick='lightbox("+(24-1)+")'></div>");
 	}
 	for(i=1;i<=Photograph;i++){
 		$(".slider-inner ul").append("<li><a class='ns-img' href='img/Photograph/"+ i +".jpg'></a></li>");
-		$("#Photograph .gallery").append("<div class= col-md-2><img src='img/Photograph/"+ i +".jpg'onclick='lightbox("+(41-1)+")'></div>");
+		$("#Photograph .gallery").append("<div class= col-md-2><img src='img/Photograph sumnail/"+ i +".jpg'onclick='lightbox("+(41-1)+")'></div>");
 	}
 	
 	
