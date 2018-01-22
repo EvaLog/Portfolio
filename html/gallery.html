@@ -7,6 +7,7 @@
 	}
 	.col-md-12 {
 	background-color:white;
+	border-radius: 5px;
 	}
 	.col-md-2 {
 	margin:0px;
@@ -30,6 +31,37 @@
            
             cursor:pointer;
         }
+		.btn2 {
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  letter-spacing: 0.3em;
+  color: rgba(223,190,106,0.7);
+  border-radius: 0;
+  padding: 18px 60px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.625rem;
+  border: none;
+  border: 1px solid rgba(223,190,106,0.3);
+  width:100%;
+}
+.btn2:hover {
+  color: #fff;
+  border: 1px solid rgba(223,190,106,0);
+  
+  background-position: 99% 50%;
+}
+.container{
+	padding: 0px;
+}
+
 </style>
 
 <script>
@@ -61,11 +93,11 @@ $(document).ready(function(){
 		}	
 	for(i=1;i<=movie;i++){
 		$(".slider-inner ul").append("<li><a class='ns-img' href='img/movie/"+ i +".jpg'></a></li>");
-		$("#movie .gallery").append("<div class= col-md-2><img src='img/movie sumnail/"+ i +".jpg'onclick='lightbox("+(24-1)+")'></div>");
+		$("#movie .gallery").append("<div class= col-md-2><img src='img/movie sumnail/"+ i +".jpg'onclick='lightbox("+(i+24-2)+")'></div>");
 	}
 	for(i=1;i<=Photograph;i++){
 		$(".slider-inner ul").append("<li><a class='ns-img' href='img/Photograph/"+ i +".jpg'></a></li>");
-		$("#Photograph .gallery").append("<div class= col-md-2><img src='img/Photograph sumnail/"+ i +".jpg'onclick='lightbox("+(41-1)+")'></div>");
+		$("#Photograph .gallery").append("<div class= col-md-2><img src='img/Photograph sumnail/"+ i +".jpg'onclick='lightbox("+(i+41-2)+")'></div>");
 	}
 	
 	
@@ -75,19 +107,19 @@ $(document).ready(function(){
 		value =$(this).attr('value');
 		if(value==1){
 				
-			$("#wedding").show();
-			$("#movie").hide();
-			$("#Photograph").hide();
+			$("#wedding").show(1000);
+			$("#movie").hide(1000);
+			$("#Photograph").hide(1000);
 		}else if(value==2){
 				
-			$("#wedding").hide();
-			$("#movie").show();
-			$("#Photograph").hide();
+			$("#wedding").hide(1000);
+			$("#movie").show(1000);
+			$("#Photograph").hide(1000);
 		}else if(value==3){
 				
-			$("#wedding").hide();
-			$("#movie").hide();
-			$("#Photograph").show();
+			$("#wedding").hide(1000);
+			$("#movie").hide(1000);
+			$("#Photograph").show(1000);
 		}
 		
 	
@@ -95,8 +127,6 @@ $(document).ready(function(){
 		
 		
 	});
-	/* 실험 ---------------------------------*/
-	
 	
 	
 	
@@ -104,11 +134,11 @@ $(document).ready(function(){
 
 </script>
 
-<div class="container-fluid">							
+<div class="container">							
 	<div class="col-md-12">
-	<div class="col-md-4"><button class="btn" value="1">Wedding</button></div>
-	<div class="col-md-4"><button class="btn" value="2">Movie</button></div>
-	<div class="col-md-4"><button class="btn" value="3">Photograph</button></div>
+	<div class="col-md-4"><button class="btn2" value="1">Wedding</button></div>
+	<div class="col-md-4"><button class="btn2" value="2">Movie</button></div>
+	<div class="col-md-4"><button class="btn2" value="3">Photograph</button></div>
 	<div style="display:none;">
         <div id="ninja-slider">
             <div class="slider-inner">

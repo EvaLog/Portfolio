@@ -13,27 +13,35 @@ $(document).ready(function(){
         prevEl: '.swiper-button-prev',
       },
     });
+  
    
-
 });
 </script>
 <style>
-.col-md-12 {
+#conmain {
+  border-radius: 5px;
 	background-color:white;
-	padding:0px;
+	padding:10px;
 	margin:0px;
 	}
-	.col-md-6{
-	padding:0px;}
+  .col-md-7{
+    padding: 0px;
+  }
+	
 	.container {
 	padding: 0px;
 	}
 	#profile {
-	margin:20px 10px 20px 20px;
 	background-color:blanchedalmond;
-	padding:0px;
-	height:100%;
+	padding:34px;
+	height:auto;
+ 
 	}
+  #abtitle{
+    font-family: '다음체';
+    text-align: center;
+    padding: 10%;
+  }
 	
 	#profile li {
 	margin:10px;
@@ -41,7 +49,7 @@ $(document).ready(function(){
 	#profileimg {
 		width:100%;
 		height:100%;
-		margin:20px 20px 20px 10px;
+		
 	}
     .swiper-container {
       width: 100%;
@@ -65,19 +73,32 @@ $(document).ready(function(){
         width: 50%;
         height: 70%;
     }
+    #list{
+    list-style:none;
+    float:left;
+    }
 </style>
 
 	<div class="container">
-	<div class="col-md-12">
-	<div class="col-md-5"id="profile">
-	
-	<ul>
-	<li><span style="font-family:'Comic Sans MS'">Name :</span><span style="font-family:'굴림'"> 박 민 혁 </span></li>
-	<li><span style="font-family:'Comic Sans MS'">Phone :</span><span style="font-family:'굴림'"> 010-5011-2676 </span></li>
-	<li><span style="font-family:'Comic Sans MS'">E-mail :</span><span style="font-family:'굴림'"> alsgur2676@naver.com </span></li>
+	<div class="col-md-12" id="conmain">
+	<div class="col-md-5" id="profile">
+    <span id="abtitle">
+      <h3>‘Your Twins'</h3>
+      <br>
+      <h5>당신이 걸어온 자취를</h5>
+      <h5>당신이 서있는 오늘을</h5>
+      <h5>당신이 그리는 미래를 </h5>
+    
+      <h5>당신의 쌍둥이가 되어 오늘을 함께 하겠습니다.</h5>
+    </span>
+    <br><br><br>
+  <ul id="list">
+	<li><span style="font-family:'Comic Sans MS'">Name :</span><span> 박 민 혁 </span></li>
+	<li><span style="font-family:'Comic Sans MS'">Phone :</span><span> 010-5011-2676 </span></li>
+	<li><span style="font-family:'Comic Sans MS'">E-mail :</span><span> alsgur2676@naver.com </span></li>
 	</ul>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-7">
 	<figure><img src="img/profile.jpg" id="profileimg"></figure>
 	</div>
 	</div>
@@ -93,8 +114,8 @@ $(document).ready(function(){
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
             <!-- Add Pagination -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next" id="btn"></div>
+            <div class="swiper-button-prev" id="btn"></div>
           </div>
 	
 	</div>
