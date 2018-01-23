@@ -9,28 +9,9 @@
 	background-color:white;
 	border-radius: 5px;
 	}
-	.col-md-2 {
-	margin:0px;
 	
-	}
-	.col-md-2 img {
-	/* height:100px; */
-	}
-	.col-md-2 img {
-		width:100%;
-		height:80%;
-		margin-top:20px;
-		margin-bottom:20px;
-		box-shadow: 2px 5px 2px rgb(156, 156, 156);
-	}
 	/* 실험 */
-	
-        a {color:#1155CC;}
-        ul li {padding: 10px 0;}
-       .gallery img{
-           
-            cursor:pointer;
-        }
+
 		.btn2 {
   display: inline-block;
   background: transparent;
@@ -61,44 +42,65 @@
 .container{
 	padding: 0px;
 }
+.col-md-2 img{
+		width: 100%;
+		height: 99%;
+		margin-top:30px;
+		margin-bottom:40px;
+		box-shadow: 2px 5px 2px rgb(156, 156, 156);
+		}
+.modal-content{
+			width: 100%;
+			height: 80%;
+			margin-top: 20%;
+		}
+#galsum{
+			width: 100%;
+			height: 100%;
+
+		}
 
 </style>
 
 <script>
-function lightbox(idx) {
-    //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
-    var ninjaSldr = document.getElementById("ninja-slider");
-    ninjaSldr.parentNode.style.display = "block";
 
-    nslider.init(idx);
-
-    var fsBtn = document.getElementById("fsBtn");
-    fsBtn.click();
-}
-
-function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
-    if (isFullscreen) {
-        ninjaSldr.parentNode.style.display = "none";
-    }
-}
 $(document).ready(function(){
-	
-	var wedding = 23;
-	
-	var movie = 17;
-	var Photograph = 21;
-	for(i=1;i<=wedding;i++){
-		$(".slider-inner ul").append("<li><a class='ns-img' href='img/weding/"+ i +".JPG'></a></li>");
-		$("#wedding .gallery").append("<div class= col-md-2><img src='img/weding sumnail/"+ i +".jpg'onclick='lightbox("+(i-1)+")'></div>");
-		}	
-	for(i=1;i<=movie;i++){
-		$(".slider-inner ul").append("<li><a class='ns-img' href='img/movie/"+ i +".jpg'></a></li>");
-		$("#movie .gallery").append("<div class= col-md-2><img src='img/movie sumnail/"+ i +".jpg'onclick='lightbox("+(i+24-2)+")'></div>");
-	}
-	for(i=1;i<=Photograph;i++){
-		$(".slider-inner ul").append("<li><a class='ns-img' href='img/Photograph/"+ i +".jpg'></a></li>");
-		$("#Photograph .gallery").append("<div class= col-md-2><img src='img/Photograph sumnail/"+ i +".jpg'onclick='lightbox("+(i+41-2)+")'></div>");
-	}
+	for(i=1;i<=23;i++){
+		var wd= "";
+		
+		wd ="<div class='col-md-2'><a class='btn-primary' data-toggle='modal' data-target='#w"+i+"'><img src='img/weding sumnail/"+ i +".jpg'></a></div>"
+		wd +="<div class='modal fade bs-example-modal-lg'id='w"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
+		wd +="<div class='modal-dialog modal-lg'>"
+		wd +="<div class='modal-content'>"
+		wd +="<img id='galsum' src='img/weding/"+ i +".JPG'></div>"
+		wd +="</div></div></div>"
+		$("#wedding .gallery").append(wd);
+		}
+		wd =null;
+		for(i=1;i<=17;i++){
+		var  mv= "";
+		
+		mv ="<div class='col-md-2'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/movie sumnail/"+ i +".jpg'></a></div>"
+		mv +="<div class='modal fade bs-example-modal-lg'id='m"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
+		mv +="<div class='modal-dialog modal-lg'>"
+		mv +="<div class='modal-content'>"
+		mv +="<img id='galsum' src='img/movie/"+ i +".JPG'></div>"
+		mv +="</div></div></div>"
+		$("#movie .gallery").append(mv);
+		}
+		mv =null;
+		for(i=1;i<=21;i++){
+		var  pg= "";
+		
+		pg ="<div class='col-md-2'><a class='btn-primary' data-toggle='modal' data-target='#p"+i+"'><img src='img/Photograph sumnail/"+ i +".jpg'></a></div>"
+		pg +="<div class='modal fade bs-example-modal-lg'id='p"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
+		pg +="<div class='modal-dialog modal-lg'>"
+		pg +="<div class='modal-content'>"
+		pg +="<img id='galsum' src='img/Photograph/"+ i +".JPG'></div>"
+		pg +="</div></div></div>"
+		$("#Photograph .gallery").append(pg);
+		}
+		pg =null;
 	
 	
 	$("button").click(function(){
@@ -139,27 +141,19 @@ $(document).ready(function(){
 	<div class="col-md-4"><button class="btn2" value="1">Wedding</button></div>
 	<div class="col-md-4"><button class="btn2" value="2">Movie</button></div>
 	<div class="col-md-4"><button class="btn2" value="3">Photograph</button></div>
-	<div style="display:none;">
-        <div id="ninja-slider">
-            <div class="slider-inner">
-                <ul>
-                <!--들어갈 부분 -->  
-                </ul>
-                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
-            </div>
-        </div>
-    </div>
-	<div class="col-md-12" id="wedding">
-	<div class="gallery">
-    </div>
-    </div>
-	<div class="col-md-12" id="movie">
-	<div class="gallery">
-    </div>
-    </div>
-	<div class="col-md-12" id="Photograph">
-	<div class="gallery">
-    </div>
-    </div>
+		<div class="col-md-12" id="wedding">
+			<div class="gallery">
+			</div>
+		</div>
+		<div class="col-md-12" id="movie">
+			<div class="gallery">
+			</div>
+		</div>
+		<div class="col-md-12" id="Photograph">
+			<div class="gallery">
+			</div>
+		</div>
+
+	</div>
 	</div>
 </div>   
