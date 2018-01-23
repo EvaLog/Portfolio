@@ -12,7 +12,7 @@
 	
 	/* 실험 */
 
-		.btn2 {
+		.btn2 {		font-family: "영필체";
   display: inline-block;
   background: transparent;
   text-transform: uppercase;
@@ -20,7 +20,7 @@
   font-style: normal;
   font-size: 1.3rem;
   letter-spacing: 0.3em;
-  color: rgba(223,190,106,0.7);
+  color: rgba(0, 0, 0, 0.7);
   border-radius: 0;
   padding: 18px 60px 20px;
   transition: all 0.7s ease-out;
@@ -30,7 +30,7 @@
   text-decoration: none;
   margin: 0.625rem;
   border: none;
-  border: 1px solid rgba(223,190,106,0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   width:100%;
 }
 .btn2:hover {
@@ -42,7 +42,7 @@
 .container{
 	padding: 0px;
 }
-.col-md-2 img{
+.col-md-3 img{
 		width: 100%;
 		height: 99%;
 		margin-top:30px;
@@ -68,7 +68,7 @@ $(document).ready(function(){
 	for(i=1;i<=23;i++){
 		var wd= "";
 		
-		wd ="<div class='col-md-2'><a class='btn-primary' data-toggle='modal' data-target='#w"+i+"'><img src='img/weding sumnail/"+ i +".jpg'></a></div>"
+		wd ="<div class='col-md-3'><a class='btn-primary' data-toggle='modal' data-target='#w"+i+"'><img src='img/weding sumnail/"+ i +".jpg'></a></div>"
 		wd +="<div class='modal fade bs-example-modal-lg'id='w"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		wd +="<div class='modal-dialog modal-lg'>"
 		wd +="<div class='modal-content'>"
@@ -80,7 +80,7 @@ $(document).ready(function(){
 		for(i=1;i<=17;i++){
 		var  mv= "";
 		
-		mv ="<div class='col-md-2'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/movie sumnail/"+ i +".jpg'></a></div>"
+		mv ="<div class='col-md-3'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/movie sumnail/"+ i +".jpg'></a></div>"
 		mv +="<div class='modal fade bs-example-modal-lg'id='m"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		mv +="<div class='modal-dialog modal-lg'>"
 		mv +="<div class='modal-content'>"
@@ -92,7 +92,7 @@ $(document).ready(function(){
 		for(i=1;i<=21;i++){
 		var  pg= "";
 		
-		pg ="<div class='col-md-2'><a class='btn-primary' data-toggle='modal' data-target='#p"+i+"'><img src='img/Photograph sumnail/"+ i +".jpg'></a></div>"
+		pg ="<div class='col-md-3'><a class='btn-primary' data-toggle='modal' data-target='#p"+i+"'><img src='img/Photograph sumnail/"+ i +".jpg'></a></div>"
 		pg +="<div class='modal fade bs-example-modal-lg'id='p"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		pg +="<div class='modal-dialog modal-lg'>"
 		pg +="<div class='modal-content'>"
