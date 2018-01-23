@@ -28,6 +28,11 @@
 	
 	border-radius: 5px;
 	}
+	.col-xs-12{
+		background-color:white;
+	
+	border-radius: 5px;
+	}
 	.col-md-4 img{
 		width: 100%;
 		height: 99%;
@@ -57,7 +62,7 @@
 <script>
 	$(document).ready(function(){
 	for(j=10;j<=23;j++){
-		mc2 ="<div class='col-md-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+j+"'><img src='img/main sumnail/"+ j +".jpg'></a></div>"
+		mc2 ="<div class='col-md-4 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+j+"'><img src='img/main sumnail/"+ j +".jpg'></a></div>"
 		mc2 +="<div class='modal fade bs-example-modal-lg'id='m"+j+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		mc2 +="<div class='modal-dialog modal-lg'>"
 		mc2 +="<div class='modal-content'>"
@@ -68,7 +73,7 @@
 	for(i=1;i<=9;i++){
 		var mc = "";
 		var mc2="";
-		mc ="<div class='col-md-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/main sumnail/"+ i +".jpg'></a></div>"
+		mc ="<div class='col-md-4 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/main sumnail/"+ i +".jpg'></a></div>"
 		mc +="<div class='modal fade bs-example-modal-lg'id='m"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		mc +="<div class='modal-dialog modal-lg'>"
 		mc +="<div class='modal-content'>"
@@ -91,12 +96,12 @@
 </script>
 <div class="container">
 					
-	<div class="col-md-12" id="maini">
+	<div class="col-md-12 col-xs-12" id="maini">
 	
 			
 	</div>
-	<div class="col-md-12" id="between"><button id="SM">Show More</button></div>
-	<div class="col-md-12" id="maini2">
+	<div class="col-md-12 col-xs-12" id="between"><button id="SM">Show More</button></div>
+	<div class="col-md-12 col-xs-12" id="maini2">
 
 		
 	</div>
