@@ -79,7 +79,9 @@ input[type=submit]:hover {
   .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
+      
   }
+ 
 }
 </style>
 <script>
@@ -95,17 +97,17 @@ input[type=submit]:hover {
       <form action="http://mail.naver.com/write/popup?srvid=note&to=alsgur2676@naver.com&subject='Subject'&body='memo'" method="GET">
         <div class="row">
           <div class="col-100">
-            <input type="text" id="fname" name="to" placeholder="받는사람" value="alsgur2676@naver.com">
+            <input type="text" id="fname" name="to" placeholder="받는사람" value="alsgur2676@naver.com" style="background-color:black;color:white">
           </div>
         </div>
         <div class="row">         
           <div class="col-100">
-            <input type="text" id="lname" name="subject" placeholder="제목">
+            <input type="text" id="lname" name="subject" placeholder="제목" style="background-color:black;color:white">
           </div>
         </div>
         <div class="row">
          <div class="col-100">
-            <textarea id="memo" name="body" placeholder="내용" style="height:200px"></textarea>
+            <textarea id="memo" name="body" placeholder="내용" style="height:200px;background-color:black;color:white"></textarea>
           </div>
         </div>
         <div class="row">
