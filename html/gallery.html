@@ -9,6 +9,10 @@
 	background-color:white;
 	border-radius: 5px;
 	}
+	.col-xs-12{
+	background-color:white;
+	border-radius: 5px;
+	}
 	
 	/* 실험 */
 
@@ -61,14 +65,15 @@
 
 		}
 		.btn2{
-		margin-top:35px;}
+			margin-top: 35px;
+
+		}
 		#movie{
 			display: none;
 		}
 		#Photograph{
 			display: none;
 		}
-
 </style>
 
 <script>
@@ -77,7 +82,7 @@ $(document).ready(function(){
 	for(i=1;i<=23;i++){
 		var wd= "";
 		
-		wd ="<div class='col-md-3'><a class='btn-primary' data-toggle='modal' data-target='#w"+i+"'><img src='img/weding sumnail/"+ i +".jpg'></a></div>"
+		wd ="<div class='col-md-3 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#w"+i+"'><img src='img/weding sumnail/"+ i +".jpg'></a></div>"
 		wd +="<div class='modal fade bs-example-modal-lg'id='w"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		wd +="<div class='modal-dialog modal-lg'>"
 		wd +="<div class='modal-content'>"
@@ -89,11 +94,11 @@ $(document).ready(function(){
 		for(i=1;i<=17;i++){
 		var  mv= "";
 		
-		mv ="<div class='col-md-3'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/movie sumnail/"+ i +".jpg'></a></div>"
+		mv ="<div class='col-md-3 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/movie sumnail/"+ i +".jpg'></a></div>"
 		mv +="<div class='modal fade bs-example-modal-lg'id='m"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		mv +="<div class='modal-dialog modal-lg'>"
 		mv +="<div class='modal-content'>"
-		mv +="<img id='galsum' src='img/movie/"+ i +".JPG'></div>"
+		mv +="<img id='galsum' src='img/movie/"+ i +".jpg'></div>"
 		mv +="</div></div></div>"
 		$("#movie .gallery").append(mv);
 		}
@@ -101,11 +106,11 @@ $(document).ready(function(){
 		for(i=1;i<=21;i++){
 		var  pg= "";
 		
-		pg ="<div class='col-md-3'><a class='btn-primary' data-toggle='modal' data-target='#p"+i+"'><img src='img/Photograph sumnail/"+ i +".jpg'></a></div>"
+		pg ="<div class='col-md-3 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#p"+i+"'><img src='img/Photograph sumnail/"+ i +".jpg'></a></div>"
 		pg +="<div class='modal fade bs-example-modal-lg'id='p"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
 		pg +="<div class='modal-dialog modal-lg'>"
 		pg +="<div class='modal-content'>"
-		pg +="<img id='galsum' src='img/Photograph/"+ i +".JPG'></div>"
+		pg +="<img id='galsum' src='img/Photograph/"+ i +".jpg'></div>"
 		pg +="</div></div></div>"
 		$("#Photograph .gallery").append(pg);
 		}
@@ -146,7 +151,7 @@ $(document).ready(function(){
 </script>
 
 <div class="container">							
-	<div class="col-md-12">
+	<div class="col-md-12 col-xs-12">
 	<div class="col-md-4"><button class="btn2" value="1">Wedding</button></div>
 	<div class="col-md-4"><button class="btn2" value="2">Movie</button></div>
 	<div class="col-md-4"><button class="btn2" value="3">Photograph</button></div>
