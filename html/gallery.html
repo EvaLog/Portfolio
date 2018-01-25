@@ -8,11 +8,14 @@
 	.col-md-12 {
 	background-color:white;
 	border-radius: 5px;
+        padding: 0px;
 	}
 	.col-xs-12{
 	background-color:white;
 	border-radius: 5px;
+        padding: 0px;
 	}
+	
 	
 	/* 실험 */
 
@@ -20,23 +23,24 @@
 			font-family: "영필체";
   display: inline-block;
   background: transparent;
-  text-transform: uppercase;
+  
   font-weight: 500;
   font-style: normal;
   font-size: 1.3rem;
-  letter-spacing: 0.3em;
+  
   color: rgba(0, 0, 0, 0.7);
   border-radius: 0;
-  padding: 18px 60px 20px;
+ 
   transition: all 0.7s ease-out;
   background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
   background-position: 1% 50%;
   background-size: 300% 300%;
   text-decoration: none;
-  margin: 0.625rem;
+  
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.3);
   width:100%;
+            height: 30px;
 }
 .btn2:hover {
   color: #fff;
@@ -65,7 +69,7 @@
 
 		}
 		.btn2{
-			margin-top: 35px;
+			margin-top: 15px;
 
 		}
 		#movie{
@@ -74,11 +78,12 @@
 		#Photograph{
 			display: none;
 		}
-			.col-md-3{
+			.col-md-3, .col-xs-4{
 			padding-left: 1.3%;
 			padding-right: 1.3%;
 
 		}
+    
 </style>
 
 <script>
@@ -157,22 +162,22 @@ $(document).ready(function(){
 
 <div class="container">							
 	<div class="col-md-12 col-xs-12">
-	<div class="col-md-4"><button class="btn2" value="1">Wedding</button></div>
-	<div class="col-md-4"><button class="btn2" value="2">Movie</button></div>
-	<div class="col-md-4"><button class="btn2" value="3">Photograph</button></div>
-		<div class="col-md-12" id="wedding">
+	<div class="col-md-4 col-xs-4"><button class="btn2" value="1">Wedding</button></div>
+	<div class="col-md-4 col-xs-4"><button class="btn2" value="2">Movie</button></div>
+	<div class="col-md-4 col-xs-4"><button class="btn2" value="3">Photograph</button></div>
+		<div class="col-md-12 col-xs-12" id="wedding">
 			<div class="gallery">
 			</div>
 		</div>
-		<div class="col-md-12" id="movie">
+		<div class="col-md-12 col-xs-12" id="movie">
 			<div class="gallery">
 			</div>
 		</div>
-		<div class="col-md-12" id="Photograph">
+		<div class="col-md-12 col-xs-12" id="Photograph">
 			<div class="gallery">
 			</div>
 		</div>
 
 	</div>
-	</div>
+	
 </div>   
