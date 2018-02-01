@@ -3,7 +3,7 @@ var gApp = angular.module('gApp', []);
     	$rootScope.address = "서울시 금천구 가산디지털2로 115 대륭테크노타운3차";
     	$rootScope.dns = "GooDee";
     	$rootScope.title = "Portfolio";
-    	$rootScope.name = "박기윤";
+    	$rootScope.name = "이근형";
     });
 	gApp.controller('gCtrl', function($scope) {
 		$scope.htmlCheck = false;
@@ -50,7 +50,7 @@ var gApp = angular.module('gApp', []);
 			 name: "Impression",
 			 img: "team/TeamImpression.png",
 			 type : true, 
-			 contents: "처음 만드는 홈페이지라서 어떤 것부터 시작해야 되는지도 몰랐고, 팀원들과 역할 분담을 어떻게 해야될지가 가장 어려웠던 것 같습니다. 교육을 받고도 어떻게 응용해야될지를 몰라서 흐지부지 지나간 시간들이 많아서 아쉬웠고, 지금 다시 팀원들과 홈페이지 제작을 하게 된다면 더 좋은 기능들을 넣은 홈페이지를 제작할 수 있을 것 같습니다."
+			 contents: "처음으로 팀프로젝트를 진행해보았고 제가 원해서 했던 팀장자리는 아니였지만 돌이켜 생각해보면 팀장 하기를 잘했던거 같습니다. 생각보다 팀원들 관리하면서 차근차근 프로젝트를 해나간거에대해 뿌듯함과 할 수 있다는 자신감이 붙은거 같습니다. 다음에도 이런 기회가 있었으면 좋겠습니다."
 			},{
 			 path: "portfolio/",
 			 url : "personal/personal.pdf", 
@@ -58,8 +58,7 @@ var gApp = angular.module('gApp', []);
 			 name: "Impression",
 			 img: "personal/PersonalImpression.png",
 			 type : false,
-			 contents: "개인프로젝트를 완성후에 그 뿌듯함과 성취감은 팀프로젝트를 완성했을때와는 사뭇 달랐습니다. 처음부터 혼자서 기획하고 자료를 수집하고 디자인을 하는것은 상당히 어려웠는데 미숙하지만 완성할 수 있어서 다행이라고 생각합니다. 후에 제 기술이 더 발전을하면 완성한 프로젝트를 더 가다듬고 가꾸고 싶다는 생각이 들었고, 제가 한걸음 더 성장했다는걸 느낄수 있는 좋은 경험이었습니다."
-			},{
+			 contents: "지인의 권유로 진행하게된 프로젝트인데 포트폴리오라 기능적인 부분에서 많이어렵지는 않았는데 제가 만든걸 보여주면서 어건 어떻고 저건 어떻고 피드백과 커뮤니케이션을 하다보니 생각보다 오래걸렸습니다.프론트엔드만 사용해가지고 좀 가벼운감이 없지않았지만 그래도 기간내에 성공적으로 끝냈습니다."},{
 			 path: "media/",
 			 url : "personal.mp4", 
 			 title: "Personal",
