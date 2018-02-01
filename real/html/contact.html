@@ -1,0 +1,137 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#conmain {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+  
+}
+#con1{
+  font-family: '필기체';
+  font-size: 25px;
+}
+#con2{
+  font-family: '다음체';
+    margin-top: 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 18%;
+  margin-top: 6px;
+}
+
+.col-100 {
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container{
+  padding: 0px;
+ 
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+            
+  }
+  #Fi{
+  margin-top:0px;}
+
+#con1{
+padding:0px;
+}
+ 
+}
+    #conimg{
+        width: 100%;
+       margin: 10px 0px;
+    }
+    @media (min-width: 601px) {
+     #Fi{
+    margin-top:50px;
+    }
+    }
+   
+</style>
+<script>
+    
+</script>
+<div class="container">	
+  <div class="col-md-12" id="conmain">
+    <div class="col-md-4" id="con1">
+    <h2>Please send mail</h2>
+    <p>If egg is broken by outside force life ends. If broken by inside force life begins. Great things always begin from inside. Have a nice day.</p>
+    <img id="conimg" src="img/contackimg.jpg">
+  </div>
+  <div class="col-md-8" id="con2">
+      <form action="http://mail.naver.com/write/popup?srvid=note&to=alsgur2676@naver.com&subject='Subject'&body='memo'" method="GET">
+        <div class="row" id="Fi">
+          <div class="col-100">
+            <input type="text" id="fname" name="to" placeholder="받는사람" value="alsgur2676@naver.com" style="background-color:black;color:white">
+          </div>
+        </div>
+        <div class="row">         
+          <div class="col-100">
+            <input type="text" id="lname" name="subject" placeholder="제목" style="background-color:black;color:white">
+          </div>
+        </div>
+        <div class="row">
+         <div class="col-100">
+            <textarea id="memo" name="body" placeholder="내용" style="height:250px;background-color:black;color:white"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="네이버메일 보내기">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

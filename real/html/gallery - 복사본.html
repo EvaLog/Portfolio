@@ -1,0 +1,165 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style>
+.container {
+	padding: 0px;
+	}
+	.col-md-12 {
+	background-color:white;
+	border-radius: 5px;
+	}
+	.col-md-2 {
+	margin:0px;
+	
+	}
+	.col-md-2 img {
+	/* height:100px; */
+	}
+	.col-md-2 img {
+		width:100%;
+		height:80%;
+		margin-top:20px;
+		margin-bottom:20px;
+		box-shadow: 2px 5px 2px rgb(156, 156, 156);
+	}
+	/* 실험 */
+	
+        a {color:#1155CC;}
+        ul li {padding: 10px 0;}
+       .gallery img{
+           
+            cursor:pointer;
+        }
+		.btn2 {
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3rem;
+  letter-spacing: 0.3em;
+  color: rgba(223,190,106,0.7);
+  border-radius: 0;
+  padding: 18px 60px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.625rem;
+  border: none;
+  border: 1px solid rgba(223,190,106,0.3);
+  width:100%;
+}
+.btn2:hover {
+  color: #fff;
+  border: 1px solid rgba(223,190,106,0);
+  
+  background-position: 99% 50%;
+}
+.container{
+	padding: 0px;
+}
+
+</style>
+
+<script>
+function lightbox(idx) {
+    //show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+    var ninjaSldr = document.getElementById("ninja-slider");
+    ninjaSldr.parentNode.style.display = "block";
+
+    nslider.init(idx);
+
+    var fsBtn = document.getElementById("fsBtn");
+    fsBtn.click();
+}
+
+function fsIconClick(isFullscreen, ninjaSldr) { //fsIconClick is the default event handler of the fullscreen button
+    if (isFullscreen) {
+        ninjaSldr.parentNode.style.display = "none";
+    }
+}
+$(document).ready(function(){
+	
+	var wedding = 23;
+	
+	var movie = 17;
+	var Photograph = 21;
+	for(i=1;i<=wedding;i++){
+		$(".slider-inner ul").append("<li><a class='ns-img' href='img/weding/"+ i +".JPG'></a></li>");
+		$("#wedding .gallery").append("<div class= col-md-2><img src='img/weding sumnail/"+ i +".jpg'onclick='lightbox("+(i-1)+")'></div>");
+		}	
+	for(i=1;i<=movie;i++){
+		$(".slider-inner ul").append("<li><a class='ns-img' href='img/movie/"+ i +".jpg'></a></li>");
+		$("#movie .gallery").append("<div class= col-md-2><img src='img/movie sumnail/"+ i +".jpg'onclick='lightbox("+(i+24-2)+")'></div>");
+	}
+	for(i=1;i<=Photograph;i++){
+		$(".slider-inner ul").append("<li><a class='ns-img' href='img/Photograph/"+ i +".jpg'></a></li>");
+		$("#Photograph .gallery").append("<div class= col-md-2><img src='img/Photograph sumnail/"+ i +".jpg'onclick='lightbox("+(i+41-2)+")'></div>");
+	}
+	
+	
+	$("button").click(function(){
+		
+	var value = 0;
+		value =$(this).attr('value');
+		if(value==1){
+				
+			$("#wedding").show(1000);
+			$("#movie").hide(1000);
+			$("#Photograph").hide(1000);
+		}else if(value==2){
+				
+			$("#wedding").hide(1000);
+			$("#movie").show(1000);
+			$("#Photograph").hide(1000);
+		}else if(value==3){
+				
+			$("#wedding").hide(1000);
+			$("#movie").hide(1000);
+			$("#Photograph").show(1000);
+		}
+		
+	
+		
+		
+		
+	});
+	
+	
+	
+});
+
+</script>
+
+<div class="container">							
+	<div class="col-md-12">
+	<div class="col-md-4"><button class="btn2" value="1">Wedding</button></div>
+	<div class="col-md-4"><button class="btn2" value="2">Movie</button></div>
+	<div class="col-md-4"><button class="btn2" value="3">Photograph</button></div>
+	<div style="display:none;">
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                <!--들어갈 부분 -->  
+                </ul>
+                <div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+    </div>
+	<div class="col-md-12" id="wedding">
+	<div class="gallery">
+    </div>
+    </div>
+	<div class="col-md-12" id="movie">
+	<div class="gallery">
+    </div>
+    </div>
+	<div class="col-md-12" id="Photograph">
+	<div class="gallery">
+    </div>
+    </div>
+	</div>
+</div>   

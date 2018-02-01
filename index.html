@@ -1,54 +1,86 @@
 <!DOCTYPE html>
-<html data-ng-app="Site"> <!-- 모듈 가져오기  -->
+<html data-ng-app="gApp" data-ng-controller="gCtrl" data-ng-class="{htmlOn: htmlCheck}">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>박민혁</title>
-	<link rel="shortcut icon" type="image/x-icon" href="img/ic_camera.png" />
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="angular/angular.min.js"></script>
-	<script type="text/javascript" src="angular/angular-route.min.js"></script>
-	<script type="text/javascript" src="js/site.js"></script>
-	<script type="text/javascript" src="js/contact.js"></script>
-	<link href="css/ninja-slider.css" rel="stylesheet" type="text/css" />
-	<link href="css/thumbnail-slider.css" rel="stylesheet" type="text/css" />
-	<script src="js/ninja-slider.js" type="text/javascript"></script>
-	<script src="js/thumbnail-slider.js" type="text/javascript"></script>
-	<script src="js/swiper.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/swiper.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title data-ng-bind="title"></title>
+<link rel="shortcut icon" type="image/x-icon" href="images/icon_goodee.png" />
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" media="only screen and (max-width: 1500px)" href="css/common_1500.css">
+<link rel="stylesheet" media="only screen and (max-width: 1200px)" href="css/common_1200.css">
+<link rel="stylesheet" media="only screen and (max-width: 992px)" href="css/common_992.css">
+<link rel="stylesheet" media="only screen and (max-width: 768px)" href="css/common_768.css">
+<link rel="stylesheet" media="only screen and (max-width: 576px)" href="css/common_576.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="lib/isotope-docs.min.js"></script>
+
+<script src="js/app.js"></script>
+
 </head>
-<style>
-	body{
-	background-image:url("img/background.png");
-	background-attachment: fixed;
-	}
-	@font-face {
-   font-family: '필기체'; /* 폰트 패밀리 이름 주기*/
-   src: url('font/Dynalight-Regular.ttf'); /*폰트 파일 주소*/
-	}
-	@font-face {
-   font-family: '다음체'; /* 폰트 패밀리 이름 주기*/
-   src: url('font/Daum_Regular.ttf'); /*폰트 파일 주소*/
-	}
-	@font-face {
-   font-family: '영필체'; /* 폰트 패밀리 이름 주기*/
-   src: url('font/DIEHLD__.ttf'); /*폰트 파일 주소*/
-	}
-    @font-face {
-   font-family: '새날'; /* 폰트 패밀리 이름 주기*/
-   src: url('font/DXSeNB.ttf'); /*폰트 파일 주소*/
-	}
-    
-</style>
-<body>
-<div class="container">
-<div data-ng-include="nav"></div>		<!-- nav는 site.js에 rootScope로 지정 -->
-
-<div data-ng-view></div>	<!-- data-ng-view 가져온 모듈 보여주기 / 페이지당 1번만 사용 가능-->
-
-<div data-ng-include="footer"></div>
-</div> 
+<body data-ng-class="{bodyOn: bodyCheck}">
+	<nav>
+		<h1 class="text-center" data-ng-bind="title"></h1>
+		<div class="container">
+			<a href="#" class="navbar-site" data-ng-bind="title"></a>
+			<button type="button" class="navbar-toggler" data-ng-click="dropEvent()">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div data-ng-class="{displayNone: btCheck}" resize>
+				<ul>
+					<li><a href="#" data-ng-bind="name"></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="contents">
+		<button type="button" class="btn" data-ng-repeat="rows in btnList" data-ng-click="btnEvnet($index)" data-ng-class="{active : rows.active}" data-ng-bind="rows.name"></button>
+	</section>
+	<section class="contents2" data-ng-if="projectFlag">
+		<div id="inBox" class="bg_white">
+			<h1>{{row.name}}</h1>
+			<div class="subBox width-100" data-ng-if="">
+				<a data-ng-href="{{row.path}}{{row.url}}" target="_blank">
+					<img alt="" data-ng-src="images/{{row.img}}">
+				</a>
+			</div>
+			<div class="subBox width-100" data-ng-if="row.name != 'Media'">
+				<a data-ng-href="{{row.path}}{{row.url}}" target="_blank">
+					<img alt="" data-ng-src="images/{{row.img}}">
+				</a>
+				<div data-ng-if="row.name == 'Impression'">
+					<h3>Thinking</h3>
+					<p data-ng-bind="row.contents"></p>
+				</div>
+			</div>
+			<div class="subBox width-100" data-ng-if="row.name == 'Media'">
+				<video autoplay controls>
+				  <source data-ng-src="{{row.path}}{{row.url}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</section>
+	<section class="contents">
+		<ul id="portfolioGroup">
+			<li class="isotope-item" data-ng-repeat="rows in dataSource" data-ng-class="{bgOn: !rows.type, bgOff: rows.type}" data-ng-click="projectEvent(rows)">
+				<h1 data-ng-bind="rows.title"></h1>
+				<h3 data-ng-bind="rows.name"></h3>
+				<div>
+					<img data-ng-src="images/{{rows.img}}" >
+				</div>
+			</li>
+		</ul>
+	</section>
+	<footer class="text-center">
+	   <address> 
+	      <span data-ng-bind="address"></span> 
+	  </address>
+	  <p>{{dns}} <a href="http://goodee.co.kr" title="{{dns}}">홈페이지</a></p> 
+	</footer>
 </body>
 </html>

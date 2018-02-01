@@ -1,0 +1,114 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+	.container {
+	padding: 0px;
+	}
+/* 	.col-md-4 img {
+	-webkit-filter:grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: 5s ease-in-out;
+	transition: 5s ease-in-out;
+	
+}
+
+	.col-md-4:hover img {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	
+} */
+	.modal-content{
+		width: 100%;
+		height: 80%;
+		margin-top: 20%;
+	}
+
+	.col-md-12{
+	background-color:white;
+	
+	border-radius: 5px;
+	}
+	.col-xs-12{
+		background-color:white;
+	
+	border-radius: 5px;
+	}
+	.col-md-4 img{
+		width: 100%;
+		height: 99%;
+		margin-top:5%;
+		margin-bottom:5%;
+		box-shadow: 2px 5px 2px rgb(156, 156, 156);
+		}
+	#mainsum{
+		width: 100%;
+		height: 100%;
+	}
+	
+	#maini2{
+		display:none;
+	}
+	#between{
+		text-align: center;
+		height: 40px;
+	}
+	#SM{
+		border: 0;
+		outline: 0;
+		background-color: white;
+		width: 100%;
+	}
+	.col-md-4 {
+		padding-left: 1.25%;
+		padding-right: 1.25%;
+	}
+	
+	</style>
+<script>
+	$(document).ready(function(){
+	for(j=10;j<=23;j++){
+		mc2 ="<div class='col-md-4 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+j+"'><img src='img/main sumnail/"+ j +".jpg'></a></div>"
+		mc2 +="<div class='modal fade bs-example-modal-lg'id='m"+j+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
+		mc2 +="<div class='modal-dialog modal-lg'>"
+		mc2 +="<div class='modal-content'>"
+		mc2 +="<img id='mainsum' src='img/main/"+ j +".jpg'></div>"
+		mc2 +="</div></div></div>"
+		$("#maini2").append(mc2);
+	}
+	for(i=1;i<=9;i++){
+		var mc = "";
+		var mc2="";
+		mc ="<div class='col-md-4 col-xs-4'><a class='btn-primary' data-toggle='modal' data-target='#m"+i+"'><img src='img/main sumnail/"+ i +".jpg'></a></div>"
+		mc +="<div class='modal fade bs-example-modal-lg'id='m"+i+"' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>"
+		mc +="<div class='modal-dialog modal-lg'>"
+		mc +="<div class='modal-content'>"
+		mc +="<img id='mainsum' src='img/main/"+ i +".jpg'></div>"
+		mc +="</div></div></div>"
+		$("#maini").append(mc);
+		}
+		mc =null;	
+		// $("#maini").append("<div class='col-md-3'><a href='img/weding/"+ i +".JPG'><img src='img/sumnail/"+ i +".jpg'></a></div>");
+		// }	
+	$('#myModal').on('shown.bs.modal', function () {
+  		$('#myInput').focus()
+	});
+	$("#SM").click(function(){
+
+		
+        $("#maini2").fadeToggle("slow");
+      });
+	});
+</script>
+<div class="container">
+					
+	<div class="col-md-12 col-xs-12" id="maini">
+	
+			
+	</div>
+	<div class="col-md-12 col-xs-12" id="between"><button id="SM">Show More</button></div>
+	<div class="col-md-12 col-xs-12" id="maini2">
+
+		
+	</div>
+</div>   
